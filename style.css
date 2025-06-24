@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
 :root {
   --color-bg-dark: #222831;
   --color-bg-mid: #393e46;
@@ -31,6 +34,7 @@ body {
   transition: all 0.3s ease-in-out;
   border-bottom-right-radius: 10%;
   border-bottom-left-radius: 10%;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .navbar-brand {
@@ -48,15 +52,18 @@ body {
 .navbar-toggler {
   border: none;
   outline: none;
+  color: white !important;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%2300ADB5' viewBox='0 0 30 30'%3e%3cpath stroke='%2300ADB5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
 }
 
 .navbar-nav .nav-link {
   color: var(--color-light);
   font-weight: 500;
+  font-family: "Pixelify Sans", sans-serif;
   position: relative;
   margin-left: 1rem;
   transition: color 0.3s ease-in-out;
@@ -78,7 +85,7 @@ body {
   left: 0;
   height: 2px;
   width: 0%;
-  background-color: #4a00e0;
+  background-color: white;
   transition: width 0.3s ease-in-out;
 }
 
@@ -131,16 +138,18 @@ body {
 .hero-section h1 {
   margin-top: 3rem;
   font-size: 3rem;
-  font-weight: 900;
-  font-style: italic;
-  font-family: "Montserrat";
+  font-weight: 500 !important;
+  
+  font-family: "Caprasimo";
 
-  color: 		black !important;
+  color: 		white !important;
   animation: fadeInDown 1s ease-in-out;
 }
 
+
 .hero-section p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-family: "Pixelify Sans", sans-serif;
   font-weight: 500;
   color: F8F8FF !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -152,7 +161,7 @@ body {
 .hero-section p span{
     font-size: 1.2rem;
   font-weight: 700 !important;
-  color: #F8F8FF !important;
+  color: red !important;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 
   max-width: 700px;
@@ -160,11 +169,14 @@ body {
   animation: fadeInUp 1.5s ease-in-out;
 }
 
+
 .btn-accent {
   background-color: black;
   color: white;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
+  font-size: 1rem;
+font-family: "Montserrat", sans-serif;
   border: none;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
@@ -172,16 +184,20 @@ body {
 }
 
 .btn-accent:hover {
-  background-color: var(--color-accent);
-  color: black;
+   background-color: black;
+  color: white;
+  transform: scale(1.05);
   transition: all 0.3s ease;
 }
+
+
 
 .hero-screenshot {
   max-width: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
+  animation: fadeInUp 1s ease-in-out;
   
 }
 
@@ -190,6 +206,12 @@ body {
   max-width: 600px;
   height: auto;
   object-fit: contain;
+}
+
+.section-divider-bottom {
+  transform: rotate(180deg);
+  line-height: 0;
+  overflow: hidden;
 }
 
 
@@ -268,26 +290,13 @@ body {
   }
 }
 
-
-
-/* @keyframes fadeInZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-} */
-
 /* Type-Writer Effect */
 
 #typewriter-text {
-  color: #F8F8FF !important;
+  color: black !important;
   font-weight: 500;
   /* font-style: italic; */
-  border-right: 2px solid #F8F8FF;
+  border-right: 2px solid black;
   padding-right: 4px;
   padding-left: 4px;
   white-space: nowrap;
@@ -304,14 +313,13 @@ body {
 
 /* About Section */
 
-/* .about-section {
-  background: var(--color-bg-dark);
-  color: var(--color-light);
-} */
+.about-section{
+  background-color: white;
+}
 
 .about-img-wrapper {
   max-width: 300px;
-  border: 5px solid var(--color-accent);
+  
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
@@ -329,9 +337,250 @@ body {
   display: block;
 }
 
+#aboutBtn{
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.about-text h2{
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.about-text p{
+  font-family: "Montserrat", sans-serif;
+}
+
+
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
+  color: black;
+  
+}
+
+.about-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-shape {
+  position: absolute;
+  z-index: 0;
+  animation: floatShape 12s ease-in-out infinite alternate;
+}
+
+.about-shape.top-left {
+  top: -60px;
+  left: -80px;
+}
+
+.about-shape.bottom-right {
+  bottom: -60px;
+  right: -60px;
+}
+
+@keyframes floatShape {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-10px) scale(1.02); }
+}
+
+
+/* Skills section */
+
+.skills-section {
+ background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  );
+  color: var(--color-light);
+  overflow: hidden;
+}
+
+.skills-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-carousel {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollSkills 20s linear infinite;
+  width: max-content;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  width: 140px;
+  min-width: 140px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card i,
+.skill-card img {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   color: var(--color-accent);
 }
+
+.skill-card p {
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+.custom-icon {
+  width: 32px;
+  height: 32px;
+}
+
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Projects section */
+
+.projects-section {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure cards match height */
+}
+
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.projects-text{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.project-card:hover {
+  transform: scale(1.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Section */
+
+.contact-section {
+  background: #8e2de2;
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
+.contactIcon{
+  width: 40px;
+  height: 40px;
+}
+
+.btn.btn-light {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.btn.btn-light:hover {
+  
+  transform: translateY(-3px);
+}
+
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-text{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.section-divider-top {
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.section-divider-top svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
 
