@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --color-bg-dark: #222831;
+  --color-bg-mid: #393e46;
+  --color-accent: #00adb5;
+  --color-light: #eeeeee;
+}
+
+body {
+  margin: 0;
+  /* background-color: var(--color-light); */
+  color: var(--color-light);
+  font-family: "Montserrat", Roboto, sans-serif;
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+  background-color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease-in-out;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+.navbar-brand {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: var(--color-light);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%2300ADB5' viewBox='0 0 30 30'%3e%3cpath stroke='%2300ADB5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-light);
+  font-weight: 500;
+  position: relative;
+  margin-left: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-underline .nav-link.active {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4a00e0;
+}
+
+
+.nav-underline .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #4a00e0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-underline .nav-link:hover::after,
+.nav-underline .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-brand {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px #00ADB5);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #00ADB5);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px #00ADB5);
+  }
+}
+
+
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Hero Section */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Montserrat";
+
+  color: 		black !important;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: F8F8FF !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  max-width: 700px;
+  margin: 1rem auto;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero-section p span{
+    font-size: 1.2rem;
+  font-weight: 700 !important;
+  color: #F8F8FF !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+
+  max-width: 700px;
+  margin: 1rem auto;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.btn-accent {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent);
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.hero-screenshot {
+  margin-top: 2rem;
+  animation: zoomIn 2.5s ease-in-out;
+}
+
+.hero-screenshot img {
+  max-width: 100%;
+  height: 500px;
+  /* border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* SVG Backgrounds */
+.hero-bg {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shape-top-right {
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  animation: rotateFloat 25s ease-in-out infinite reverse;
+  transform-origin: center center;
+}
+
+.shape-bottom-left {
+  position: absolute;
+  bottom: -90px;
+  left: -90px;
+  animation: rotateFloat 20s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+
+@keyframes rotateFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg) scale(1.03);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg) scale(1);
+  }
+}
+
+
+
+/* @keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+/* Type-Writer Effect */
+
+#typewriter-text {
+  color: #F8F8FF !important;
+  font-weight: 500;
+  /* font-style: italic; */
+  border-right: 2px solid #F8F8FF;
+  padding-right: 4px;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* About Section */
+
+/* .about-section {
+  background: var(--color-bg-dark);
+  color: var(--color-light);
+} */
+
+.about-img-wrapper {
+  max-width: 300px;
+  border: 5px solid var(--color-accent);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.about-img-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.about-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
