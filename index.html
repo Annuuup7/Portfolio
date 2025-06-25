@@ -91,7 +91,7 @@
 
 
   <div class="container position-relative z-1">
-    <h1>Hi, I'm <span style="color: black;">A</span>nup 👋🏻</h1>
+    <h1 class="hero-heading">Hi, I'm <span style="color: black;">A</span>nup 👋🏻</h1>
     <p> <span id="typewriter-text"></span> Focused On Building Responsive Interfaces.
 </p>
 
@@ -105,34 +105,24 @@
 
 </section>
 
-<!-- About Section -->
-<section id="about" class="about-section py-5 position-relative overflow-hidden">
-  <!-- Background Shapes -->
-  <div class="about-shapes">
-    <!-- Top Left Blob -->
-    <svg class="about-shape top-left" viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#f0f0f0" opacity="2.5" d="M49.8,-68.5C65.8,-58.6,79.6,-43.2,84.3,-25.4C89,-7.6,84.7,12.7,76.7,31.5C68.6,50.2,56.8,67.4,41.2,74.3C25.5,81.1,6.9,77.7,-9.7,72.2C-26.4,66.7,-41.1,59.1,-53.3,47.3C-65.4,35.6,-75.1,19.7,-75.3,3.4C-75.6,-12.8,-66.3,-29.4,-55.2,-42.3C-44.1,-55.3,-31.3,-64.6,-16.1,-71.1C-0.9,-77.7,15.8,-81.6,31.8,-77.8C47.9,-74.1,63.7,-62.5,49.8,-68.5Z" transform="translate(100 100)" />
-    </svg>
-
-    
-  </div>
-
-  <!-- Content -->
-  <div class="container d-flex flex-column flex-lg-row align-items-center gap-5 position-relative z-1">
-    <div class="about-img-wrapper">
-      <img src="assets/img/aboutHero.jpg" alt="Anup Joshi" class="about-img img-fluid">
-    </div>
-
-    <div class="about-text text-center text-lg-start">
-      <h2 class="section-title mb-3">👨🏻‍💻ABOUT ME</h2>
-      <p style="color: black;">
-        I'm a passionate Front-End & Java Developer dedicated to crafting intuitive and responsive user experiences.
-        With a love for design systems and modern UI practices, I blend aesthetics with performance.
-      </p>
-      <a href="#contact" id="aboutBtn" class="btn btn-accent mt-3">🌐 Let's Connect</a>
+<section id="about" class="light-terminal-section py-5">
+  <div class="container">
+    <div class="terminal-window-light">
+      <div class="terminal-bar-light">
+        <span class="circle red"></span>
+        <span class="circle yellow"></span>
+        <span class="circle green"></span>
+        <span class="terminal-title-light">anup@portfolio: ~</span>
+      </div>
+      <div class="terminal-body-light">
+        <div id="terminal-text" class="terminal-text">
+          <span class="blinking-cursor">|</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -144,7 +134,7 @@
 <!-- Section Divider (Wave Top) -->
 <div class="section-divider-top">
   <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#ffffff" fill-opacity="1"
+    <path fill="#f8f9fa" fill-opacity="1"
       d="M0,64L48,74.7C96,85,192,107,288,106.7C384,107,480,85,576,74.7C672,64,768,64,864,80C960,96,1056,128,1152,138.7C1248,149,1344,139,1392,133.3L1440,128V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0H0Z">
     </path>
   </svg>
@@ -153,9 +143,12 @@
 
 <section id="skills" class="skills-section py-5">
   <div class="container-fluid px-0">
-    <h1 class="section-title text-center mb-5" style="color: white;">
-      <span><img src="assets/img/skillsIcon.png" alt="" style="width: 45px; height: 45px;"></span> Skills
-    </h1>
+    <h1 class="section-title text-center mb-5 text-3d">
+  <span>
+    <img src="assets/img/skillsIcon.png" alt="" style="width: 45px; height: 45px;">
+  </span> Skills
+</h1>
+
 
     <!-- Carousel Wrapper -->
     <div class="skills-carousel-wrapper mb-4">
@@ -189,32 +182,45 @@
     <h2 class="projects-text text-center mb-5">🛠️ Projects</h2>
     <div class="row g-4">
 
-      <!-- Project Card -->
-      <div class="col-md-6 col-lg-6">
-        <div class="project-card animate-fade">
-          <img src="assets/img/project1.png" alt="Project 1" class="project-img">
-          <h5 class="project-title">Ticket Dashboard</h5>
+      <!-- Project 1 -->
+        <div class="col-md-6 col-lg-6">
+        <div class="project-card animate-fade" style="animation-delay: 0.2s">
+          <div class="project-frame-wrapper lazy-load">
+            <iframe src="https://annuuup7.github.io/Portfolio" title="Portfolio" loading="lazy"></iframe>
+          </div>
+          <h5 class="project-title mt-3">Portfolio</h5>
+          <a href="https://annuuup7.github.io/Portfolio" target="_blank" class="btn btn-accent mt-2">🔍 View Full Project</a>
         </div>
       </div>
 
-      <!-- Repeat Cards -->
+    
+
+      <!-- Project 2 -->
       <div class="col-md-6 col-lg-6">
         <div class="project-card animate-fade" style="animation-delay: 0.1s">
-          <img src="assets/img/project2.png" alt="Project 2" class="project-img">
-          <h5 class="project-title">Soul Travel</h5>
+          <div class="project-frame-wrapper lazy-load">
+            <iframe src="https://annuuup7.github.io/Portfolio/soulTravel/index.html" title="Soul Travel" loading="lazy"></iframe>
+          </div>
+          <h5 class="project-title mt-3">Soul Travel</h5>
+          <a href="https://annuuup7.github.io/Portfolio/soulTravel/index.html" target="_blank" class="btn btn-accent mt-2">🔍 View Full Project</a>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-6 offset-lg-3">
-        <div class="project-card animate-fade" style="animation-delay: 0.2s">
-          <img src="assets/img/project3.png" alt="Project 3" class="project-img">
-          <h5 class="project-title">Portfolio</h5>
+      <!-- Project 3 -->
+         <div class="col-md-6 col-lg-6 offset-lg-3">
+        <div class="project-card animate-fade">
+          <div class=" lazy-load">
+            <img src="assets/img/project1.png" alt="" class="project-img">
+          </div>
+          <h5 class="project-title mt-3">Ticket Dashboard</h5>
+          <a href="https://ticketdashboard.kesug.com" target="_blank" class="btn btn-accent mt-2">🔍 View Full Project</a>
         </div>
       </div>
-
+     
     </div>
   </div>
 </section>
+
 
 <!-- Contact section -->
 
@@ -230,7 +236,8 @@
 
 <section id="contact" class="contact-section text-white py-5">
   <div class="container text-center">
-    <h3 class="mb-4 contact-text animate-fade">🔗 Let's Connect..</h3>
+    <h4 class="mb-4 contact-text animate-fade modern-3d-text">🔗 Let's Connect..</h4>
+
 
     <div class="contact-links d-flex justify-content-center flex-wrap gap-4 mb-4">
       <!-- LinkedIn -->
@@ -257,7 +264,7 @@
   </div>
 </section>
 
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center text-white py-3" style="background-color: #000; font-size: 0.95rem; ">
   <p class="mb-0">
     Crafted with ❤️ by <strong>Anup Joshi</strong>
@@ -307,12 +314,12 @@
   document.addEventListener("DOMContentLoaded", type);
 </script>
 
-
 <script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        entry.target.classList.add('animate-show');
         observer.unobserve(entry.target);
       }
     });
@@ -322,6 +329,62 @@
     observer.observe(el);
   });
 </script>
+
+<!-- Add this in your <body> or before </body> -->
+
+<!-- Typing Sound -->
+<script>
+  const terminalOutput = `$ whoami
+👨🏻‍💻 Anup Joshi
+
+$ echo "About Me"
+I'm a passionate Front-End & Java Developer focused on building intuitive and responsive UIs.
+With a love for design systems and modern UI practices,
+I blend aesthetics with performance.
+
+$ connect -- to Anup
+🌐 Let's Connect → https://linkedin.com/in/anup-joshi-b70b64243/`;
+
+  let a = 0;
+  const speed1 = 35;
+  let hasTyped = false;
+
+  function typeToTerminal() {
+    const textEl = document.getElementById("terminal-text");
+    const currentText = terminalOutput.substring(0, a);
+    textEl.textContent = currentText;
+    
+    const cursor = document.createElement("span");
+    cursor.className = "blinking-cursor";
+    cursor.textContent = "|";
+    textEl.appendChild(cursor);
+
+    if (a < terminalOutput.length) {
+      a++;
+      setTimeout(typeToTerminal, speed1);
+    }
+  }
+
+  // Scroll-based observer
+  const aboutObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasTyped) {
+        hasTyped = true;
+        typeToTerminal();
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const aboutSection = document.querySelector("#about");
+    if (aboutSection) {
+      aboutObserver.observe(aboutSection);
+    }
+  });
+</script>
+
+
 
 
 </body>
